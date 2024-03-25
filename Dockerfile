@@ -14,6 +14,14 @@ RUN git clone --recurse-submodules \
       https://github.com/RobotResearchRepos/wliu88_rail_semantic_grasping \
       /catkin_ws/src/rail_semantic_grasping
 
+RUN git clone --recurse-submodules \
+      https://github.com/GT-RAIL/rail_manipulation_msgs \
+      /catkin_ws/src/rail_manipulation_msgs
+
+RUN git clone --recurse-submodules \
+      https://github.com/wliu88/rail_part_affordance_detection \
+      /catkin_ws/src/rail_part_affordance_detection
+
 RUN . /opt/ros/$ROS_DISTRO/setup.sh \
  && apt-get update \
  && rosdep install -r -y \
